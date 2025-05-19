@@ -18,7 +18,7 @@ class DoctorImgAndText extends StatelessWidget {
                 Colors.white.withOpacity(0.0),
               ],
               begin: Alignment.bottomCenter,
-              end: Alignment.center,
+              end: Alignment.center,  
               stops: const [0.14, 0.4],
             ),
           ),
