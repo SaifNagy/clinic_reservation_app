@@ -1,11 +1,72 @@
 import 'package:clinic_reservation_app/core/theming/app_colors.dart';
+import 'package:clinic_reservation_app/core/theming/font_weight_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextStyles {
-  static TextStyle font24Black700Weight =
-      TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600, color: Colors.black,);
-  static TextStyle font32BlueBold = TextStyle(fontSize: 32.sp, fontWeight: FontWeight.bold, color: AppColors.mainBlue);
-  static TextStyle font13Gray2Regular = TextStyle(fontSize: 13.sp, fontWeight: FontWeight.normal, color: AppColors.grey2);
-  static TextStyle font16WhiteSemiBold = TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500, color: Colors.white);
+  static TextStyle font24BlackBold = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelpers.bold,
+    color: Colors.black,
+  );
+  static TextStyle font32BlueBold = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.mainBlue,
+  );
+  static TextStyle font24BlueBold = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelpers.bold,
+    color: AppColors.mainBlue,
+  );
+  static TextStyle font14Gray2SemiBold = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelpers.semiBold,
+    color: AppColors.grey2,
+  );
+  static TextStyle font14LightGrayRegular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelpers.regular,
+    color: AppColors.lightGrey,
+  );
+  static TextStyle font13Grey2Regular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelpers.regular,
+    color: AppColors.grey2,
+  );
+  static TextStyle font16WhiteMeduim = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelpers.meduim,
+    color: AppColors.white,
+  );
+  static TextStyle font14DarkBlueMeduim = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelpers.meduim,
+    color: AppColors.darkBlue,
+  );
+  static TextStyle font13DarkBlueRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelpers.regular,
+    color: AppColors.darkBlue,
+  );
+  static TextStyle font13DarkBlueMeduim = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelpers.meduim,
+    color: AppColors.darkBlue,
+  );
+  static TextStyle font13BlueRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelpers.regular,
+    color: AppColors.mainBlue,
+  );
+  static TextStyle font13BlueSemiBold = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeightHelpers.semiBold,
+    color: AppColors.mainBlue,
+  );
+  static TextStyle font16WhiteSemiBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelpers.regular,
+    color: AppColors.white,
+  );
 }
