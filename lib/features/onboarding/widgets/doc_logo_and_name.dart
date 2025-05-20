@@ -17,9 +17,8 @@ class DocLogoAndName extends StatelessWidget {
         ),
         Text(
           'The Clinic',
-          style: TextStyles.font24Black700Weight,
+          style: TextStyles.font24BlackBold,
         ),
-        
       ],
     );
   }

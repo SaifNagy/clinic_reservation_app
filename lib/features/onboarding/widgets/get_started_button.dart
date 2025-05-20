@@ -10,7 +10,9 @@ class GetStartedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {context.pushNamed(AppRoutes.homeScreen);},
+      onPressed: () {
+        context.pushNamed(AppRoutes.homeScreen);
+      },
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(AppColors.mainBlue),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -25,7 +27,7 @@ class GetStartedButton extends StatelessWidget {
       ),
       child: Text(
         'Get Started',
-        style: TextStyles.font16WhiteSemiBold,
+        style: TextStyles.font16WhiteMeduim,
       ),
     );
   }
