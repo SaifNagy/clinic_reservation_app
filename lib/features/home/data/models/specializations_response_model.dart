@@ -6,7 +6,6 @@ part 'specializations_response_model.g.dart';
 class SpecializationsResponseModel {
   @JsonKey(name: 'data')
   List<SpecializationsData?>? specializationDataList;
-  //   List<SpecializationsData?>? specializationsDataList;
 
 
   SpecializationsResponseModel({
