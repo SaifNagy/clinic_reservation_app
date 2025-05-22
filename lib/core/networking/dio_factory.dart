@@ -1,3 +1,5 @@
+import 'package:clinic_reservation_app/core/helpers/constants.dart';
+import 'package:clinic_reservation_app/core/helpers/shared_pref_helpers.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -21,11 +23,16 @@ class DioFactory {
     }
   }
 
-  static void addDioHeaders() {
+  static void addDioHeaders() async {
     dio?.options.headers = {
       'Accept': 'application/json',
-      'Authorization':
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzQ3OTM0ODE1LCJleHAiOjE3NDgwMjEyMTUsIm5iZiI6MTc0NzkzNDgxNSwianRpIjoiSVRUZ3ZWTGY5TFN2Y3UzcCIsInN1YiI6IjM4NzkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Bf6F6LQQqwJwRRURarFbJ6gkEZnBWAp-XbWe1ZQ50cc',
+      'Authorization': 'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
+    };
+  }
+  static void setTokenIntoHeaderAfterLogin(String token) async {
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer $token',
     };
   }
 

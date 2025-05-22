@@ -1,6 +1,7 @@
 import 'package:clinic_reservation_app/core/routing/app_router.dart';
 import 'package:clinic_reservation_app/core/routing/app_routes.dart';
 import 'package:clinic_reservation_app/core/theming/app_colors.dart';
+import 'package:clinic_reservation_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,7 +19,7 @@ class ClinicApp extends StatelessWidget {
         title: 'Clinic App',
         theme: ThemeData(primaryColor: AppColors.mainBlue, useMaterial3: false),
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: AppRoutes.homeScreen,
+        initialRoute: isLoggedInUser ? AppRoutes.homeScreen : AppRoutes.onBoardingScreen,
       ),
     );
   }
