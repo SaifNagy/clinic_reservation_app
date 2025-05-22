@@ -1,44 +1,29 @@
-import 'package:clinic_reservation_app/core/helpers/spacing.dart';
-import 'package:clinic_reservation_app/core/theming/app_colors.dart';
-import 'package:clinic_reservation_app/core/theming/styles.dart';
+import 'package:clinic_reservation_app/features/home/data/models/specializations_response_model.dart';
+import 'package:clinic_reservation_app/features/home/ui/widgets/doctors_speciality_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class DoctorsSpecialityListView extends StatelessWidget {
-  const DoctorsSpecialityListView({super.key});
+class DoctorsSpecialityListView extends StatefulWidget {
+  final List<SpecializationsData?> specializationsData;
+  const DoctorsSpecialityListView({required this.specializationsData, super.key});
 
+  @override
+  State<DoctorsSpecialityListView> createState() => _DoctorsSpecialityListViewState();
+}
+
+class _DoctorsSpecialityListViewState extends State<DoctorsSpecialityListView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100.h,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 8,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsetsDirectional.only(start: index == 0 ? 0 : 24.w),
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundColor: AppColors.lightblue,
-                  child: SvgPicture.asset(
-                    'assets/svgs/general_speciality.svg',
-                    height: 40.w,
-                    width: 40.h,
-                  ),
-                ),
-                verticalSpace(16),
-                Text(
-                  'Specialization',
-                  style: TextStyles.font12DarkBlueRegular,
-                )
-              ],
-            ),
-          );
-        },
-      ),
-    );
+        height: 100.h,
+        child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: widget.specializationsData.length,
+            itemBuilder: (context, index) {
+              return DoctorsSpecialityListViewItem(
+                specializationsData: widget.specializationsData[index],
+                itemIndex: index,
+              );
+            }));
   }
 }
