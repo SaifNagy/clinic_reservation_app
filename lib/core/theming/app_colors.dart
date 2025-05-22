@@ -11,4 +11,6 @@ class AppColors {
   static const Color moreLightGrey = Color(0xFFFDFDFF);
   static const Color darkBlue = Color(0xFF242424);
   static const Color white = Colors.white;
+  static const Color moreLighterGrey =Color(0xFFF5F5F5);
+  static const Color lightblue =Color(0xFFF4F8FF);
 }
