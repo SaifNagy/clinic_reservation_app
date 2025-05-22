@@ -18,7 +18,7 @@ class ClinicApp extends StatelessWidget {
         title: 'Clinic App',
         theme: ThemeData(primaryColor: AppColors.mainBlue, useMaterial3: false),
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: AppRoutes.onBoardingScreen,
+        initialRoute: AppRoutes.homeScreen,
       ),
     );
   }

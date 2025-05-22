@@ -1,6 +1,6 @@
 import 'package:clinic_reservation_app/core/di/dependency_injection.dart';
 import 'package:clinic_reservation_app/core/routing/app_routes.dart';
-import 'package:clinic_reservation_app/features/home/logic/ui/home_screen.dart';
+import 'package:clinic_reservation_app/features/home/ui/home_screen.dart';
 import 'package:clinic_reservation_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:clinic_reservation_app/features/login/ui/login_screen.dart';
 import 'package:clinic_reservation_app/features/onboarding/onboarding_screen.dart';
