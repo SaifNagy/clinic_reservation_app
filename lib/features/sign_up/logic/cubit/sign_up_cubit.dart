@@ -1,5 +1,4 @@
 import 'package:clinic_reservation_app/features/sign_up/data/modles/sign_up_request_body.dart';
-import 'package:clinic_reservation_app/features/sign_up/data/modles/sign_up_response_body.dart';
 import 'package:clinic_reservation_app/features/sign_up/data/repos/sign_up_repo.dart';
 import 'package:clinic_reservation_app/features/sign_up/logic/cubit/sign_up_state.dart';
 import 'package:flutter/material.dart';
